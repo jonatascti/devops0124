@@ -1,2 +1,0 @@
-Nova alteração
-Alteração doarquivo doc01 após o stash
