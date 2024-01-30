@@ -1,0 +1,11 @@
+FROM debian:12
+LABEL maintainer="Jonatas de Oliveira jonatascti@gmail.com"
+RUN apt-get update
+RUN apt-get install -y sudo 
+RUN apt-get install -y vim
+RUN apt-get install nodejs -y
+RUN apt install openssh-server -y
+COPY ./testenode/ /etc/
+WORKDIR /src
+CMD ["sh" "-c" "service ssh start && bash"]
+ENTRYPOINT ["/bin/bash"]
